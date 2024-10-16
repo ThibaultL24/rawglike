@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.home-page,
+.page-list {
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+#recentGamesContainer,
+#gamesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch; // Ajouté pour l'alignement
+}
+
+// Styles pour les cartes de jeux
+.game-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: calc(33.333% - 20px);
+  padding: 15px;
+  transition: transform 0.2s;
+  height: 300px; // Hauteur fixe pour toutes les cartes
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    height: 150px; // Hauteur fixe pour l'image
+    object-fit: cover; // Ajuste l'image pour remplir l'espace
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 0.9em;
+    color: #555;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background: #333;
+  color: #fff;
+}
+
+.page-detail {
+  background-color: #f4f4f4; // Fond gris clair
+  padding: 20px; // Espacement intérieur
+  max-width: 1200px; // Largeur maximale
+  margin: 0 auto; // Centrer le conteneur
+
+  .article {
+    background-color: #fff; // Fond blanc pour l'article
+    border-radius: 8px; // Coins arrondis
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Ombre douce
+    padding: 20px; // Espacement intérieur
+    margin-bottom: 20px; // Espacement entre l'article et les autres éléments
+
+    h1.title {
+      font-size: 2em; // Taille de police pour le titre
+      margin-bottom: 10px; // Espacement en bas
+      text-align: center; // Centrer le titre
+      color: #333; // Couleur du texte
+    }
+
+    p {
+      font-size: 1em; // Taille de police pour les paragraphes
+      color: #555; // Couleur de texte gris
+      margin: 5px 0; // Espacement vertical
+    }
+
+    .main-image {
+      width: 100%; // L'image occupe toute la largeur
+      height: auto; // Conserver le ratio de l'image
+      border-radius: 8px; // Coins arrondis
+      margin-bottom: 20px; // Espacement en bas
+    }
+
+    .developers,
+    .genres,
+    .tags,
+    .platforms,
+    .publishers {
+      font-weight: bold; // Mettre en gras les titres de sections
+    }
+
+    .stores {
+      margin-top: 15px; // Espacement au-dessus
+      a {
+        color: #007bff; // Couleur des liens
+        text-decoration: none; // Pas de soulignement
+        &:hover {
+          text-decoration: underline; // Soulignement au survol
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 30px; // Espacement au-dessus
+      font-size: 1.5em; // Taille de police pour les sous-titres
+      color: #333; // Couleur du texte
+    }
+
+    .screenshots {
+      display: flex; // Flexbox pour les captures d'écran
+      flex-wrap: wrap; // Permet aux images de passer à la ligne
+      justify-content: space-between; // Espacement entre les images
+      margin-top: 10px;
+
+      img {
+        width: calc(50% - 10px); // Deux images par ligne avec un espacement
+        margin-bottom: 10px; // Espacement en bas des images
+        border-radius: 8px; // Coins arrondis
+        object-fit: cover; // Ajuster les images
+      }
+    }
+  }
+}
+
